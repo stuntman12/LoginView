@@ -50,7 +50,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
+        if touches.first != nil {
             view.endEditing(true)
         }
         super .touchesBegan(touches, with: event)
@@ -90,7 +90,7 @@ final class LoginViewController: UIViewController {
         }
         
         func setupButton() {
-            buttonEnter.layer.cornerRadius = 15
+            buttonEnter.layer.cornerRadius = 20
         }
     }
 

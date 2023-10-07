@@ -14,12 +14,16 @@ final class HelloViewController: UIViewController {
     @IBOutlet weak var labelHello: UILabel!
     @IBOutlet weak var buttonLogOut: UIButton!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     var hello: String!
     
     //MARK: ViewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.image = UIImage(named: "smail")
         
         setupButton()
         setupLabel()
@@ -32,7 +36,7 @@ final class HelloViewController: UIViewController {
 
 extension HelloViewController {
     func setupButton() {
-        buttonLogOut.layer.cornerRadius = 15
+        buttonLogOut.layer.cornerRadius = 20
     }
     func setupLabel() {
         labelHello.font = .preferredFont(forTextStyle: .largeTitle)
