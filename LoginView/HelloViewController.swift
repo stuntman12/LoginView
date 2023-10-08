@@ -12,9 +12,6 @@ final class HelloViewController: UIViewController {
     //MARK: - Outlet
     
     @IBOutlet weak var labelHello: UILabel!
-    @IBOutlet weak var buttonLogOut: UIButton!
-    
-    @IBOutlet weak var imageView: UIImageView!
     
     var hello: String!
     

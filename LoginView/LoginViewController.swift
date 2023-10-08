@@ -41,7 +41,6 @@ final class LoginViewController: UIViewController {
         guard let helloVC = segue.destination as? HelloViewController else {
             return }
         helloVC.hello = loginTF.text
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -68,7 +67,6 @@ final class LoginViewController: UIViewController {
     }
 }
 //MARK: - SettingAlert
-
 
 private extension LoginViewController {
     func showAlert(title: String, message: String) {
