@@ -23,23 +23,6 @@ final class HelloViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = UIImage(named: "smail")
-        
-        setupButton()
-        setupLabel()
-        
-        labelHello.text = hello
+        labelHello.text = "Welcom \(hello ?? " ")!"
     }
 }
-
-//MARK: - SettingView
-
-extension HelloViewController {
-    func setupButton() {
-        buttonLogOut.layer.cornerRadius = 20
-    }
-    func setupLabel() {
-        labelHello.font = .preferredFont(forTextStyle: .largeTitle)
-    }
-}
-
