@@ -14,12 +14,9 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    @IBOutlet weak var buttonEnter: UIButton!
+    //MARK: - Proporty
     
-    //MARK: - Private proporty
-    
-    private let login = "admin"
-    private let password = "123"
+    let user = User.getUser()
     
     //MARK: - ViewDidLoad
     
@@ -30,7 +27,7 @@ final class LoginViewController: UIViewController {
     //MARK: - Override func
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard loginTF.text == login, passwordTF.text == password else {
+        guard loginTF.text == user.login, passwordTF.text == user.password else {
             showAlert(title: "Ошибка", message: "Неверные данные")
             return false
         }
@@ -38,9 +35,25 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let helloVC = segue.destination as? HelloViewController else {
+        guard let tabBarController = segue.destination as? UITabBarController else {
             return }
-        helloVC.hello = loginTF.text
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        viewControllers.forEach { if let helloVC = $0 as? HelloViewController {
+            helloVC.name = user.person.name
+            helloVC.female = user.person.female
+            helloVC.age = user.person.age
+            helloVC.city = user.person.city
+            }
+        }
+        viewControllers.forEach { if let FirstVC = $0 as? FirstViewController {
+            FirstVC.desc = user.person.describe
+            }
+        }
+        viewControllers.forEach { if let SecondVC = $0 as? SecondViewController {
+            SecondVC.nameCity = user.person.city
+            SecondVC.cityDesc = user.person.cityDescMoscow
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,9 +72,9 @@ final class LoginViewController: UIViewController {
     
     @IBAction func buttonForgot(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(title: "Ошибка", message: "Ваш логин: \(login)")
+            showAlert(title: "Ошибка", message: "Ваш логин: \(user.login)")
         } else if sender.tag == 1 {
-            showAlert(title: "Ошибка", message: "Ваш пароль: \(password)")
+            showAlert(title: "Ошибка", message: "Ваш пароль: \(user.password)")
             passwordTF.text = ""
         }
     }

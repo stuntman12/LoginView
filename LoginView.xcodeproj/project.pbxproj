@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5334F3B2AD5BC99007058EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5334F3A2AD5BC99007058EE /* Model.swift */; };
+		A5334F612AD7028B007058EE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5334F602AD7028B007058EE /* FirstViewController.swift */; };
+		A5334F632AD702C0007058EE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5334F622AD702C0007058EE /* SecondViewController.swift */; };
 		A5E224AA2AD078B50074520B /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E224A92AD078B50074520B /* HelloViewController.swift */; };
 		A5F8382C2ACF44DF005AD450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8382B2ACF44DF005AD450 /* AppDelegate.swift */; };
 		A5F8382E2ACF44DF005AD450 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8382D2ACF44DF005AD450 /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5334F3A2AD5BC99007058EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A5334F602AD7028B007058EE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A5334F622AD702C0007058EE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A5E224A92AD078B50074520B /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		A5F838282ACF44DF005AD450 /* LoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F8382B2ACF44DF005AD450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				A5F8382D2ACF44DF005AD450 /* SceneDelegate.swift */,
 				A5F8382F2ACF44DF005AD450 /* LoginViewController.swift */,
 				A5E224A92AD078B50074520B /* HelloViewController.swift */,
+				A5334F602AD7028B007058EE /* FirstViewController.swift */,
+				A5334F622AD702C0007058EE /* SecondViewController.swift */,
+				A5334F3A2AD5BC99007058EE /* Model.swift */,
 				A5F838312ACF44DF005AD450 /* Main.storyboard */,
 				A5F838342ACF44E0005AD450 /* Assets.xcassets */,
 				A5F838362ACF44E0005AD450 /* LaunchScreen.storyboard */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5334F3B2AD5BC99007058EE /* Model.swift in Sources */,
 				A5F838302ACF44DF005AD450 /* LoginViewController.swift in Sources */,
 				A5F8382C2ACF44DF005AD450 /* AppDelegate.swift in Sources */,
+				A5334F612AD7028B007058EE /* FirstViewController.swift in Sources */,
+				A5334F632AD702C0007058EE /* SecondViewController.swift in Sources */,
 				A5F8382E2ACF44DF005AD450 /* SceneDelegate.swift in Sources */,
 				A5E224AA2AD078B50074520B /* HelloViewController.swift in Sources */,
 			);
